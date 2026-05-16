@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matches</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">
+        <h2>🏆 WC 2034</h2>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="matches.html">Matches</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mytickets.html" class="ticket-btn">My Tickets</a></li>
+    </ul>
+</nav>
+
+
+<!-- PAGE TITLE -->
+<header>
+    <h1>🏆 Matches</h1>
+</header>
+
+
+<!-- FILTER -->
+<section class="filter-section">
+
+    <select id="stageFilter">
+        <option value="all">All Matches</option>
+        <option value="group">Group Stage</option>
+        <option value="quarter">Quarter Finals</option>
+        <option value="final">Final</option>
+    </select>
+
+    <select id="cityFilter">
+        <option value="all">All Cities</option>
+        <option value="riyadh">Riyadh</option>
+        <option value="jeddah">Jeddah</option>
+        <option value="dammam">Dammam</option>
+    </select>
+
+</section>
+
+
+<!-- MATCHES -->
+<section class="matches-container">
+
+<!-- CARD 1 -->
+<div class="match-card" data-stage="group" data-city="riyadh">
+
+    <p class="match-stage">Group Stage</p>
+    <p class="match-date">June 15, 2034</p>
+
+    <div class="teams-display">
+        <div class="team-box">
+            <div class="team-flag">🇧🇷</div>
+            <h3>Brazil</h3>
+            <p>BRA</p>
+        </div>
+
+        <strong class="vs-text">VS</strong>
+
+        <div class="team-box">
+            <div class="team-flag">🇦🇷</div>
+            <h3>Argentina</h3>
+            <p>ARG</p>
+        </div>
+    </div>
+
+    <p>🕒 20:00</p>
+    <p>📍 King Fahd International Stadium, Riyadh</p>
+    <p>🎟 58,420 tickets available</p>
+    <p>$195 - $1,500</p>
+
+    <a href="booking.html?match=brazil-argentina" class="book-now-btn">
+        Book Now
+    </a>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="match-card" data-stage="group" data-city="jeddah">
+
+    <p class="match-stage">Group Stage</p>
+    <p class="match-date">June 18, 2034</p>
+
+    <div class="teams-display">
+        <div class="team-box">
+            <div class="team-flag">🇩🇪</div>
+            <h3>Germany</h3>
+            <p>GER</p>
+        </div>
+
+        <strong class="vs-text">VS</strong>
+
+        <div class="team-box">
+            <div class="team-flag">🇪🇸</div>
+            <h3>Spain</h3>
+            <p>ESP</p>
+        </div>
+    </div>
+
+    <p>🕒 18:00</p>
+    <p>📍 King Abdullah Sports City, Jeddah</p>
+    <p>🎟 42,800 tickets available</p>
+    <p>$195 - $1,500</p>
+
+    <a href="booking.html?match=germany-spain" class="book-now-btn">
+        Book Now
+    </a>
+</div>
+
+
+<!-- CARD 3 -->
+<div class="match-card" data-stage="quarter" data-city="dammam">
+
+    <p class="match-stage">Quarter Finals</p>
+    <p class="match-date">July 5, 2034</p>
+
+    <div class="teams-display">
+        <div class="team-box">
+            <div class="team-flag">🇫🇷</div>
+            <h3>France</h3>
+            <p>FRA</p>
+        </div>
+
+        <strong class="vs-text">VS</strong>
+
+        <div class="team-box">
+            <div class="team-flag">🇬🇧󠁧󠁢󠁥󠁮󠁧</div>
+            <h3>England</h3>
+            <p>ENG</p>
+        </div>
+    </div>
+
+    <p>🕒 21:00</p>
+    <p>📍 Prince Mohammed Stadium, Dammam</p>
+    <p>🎟 35,200 tickets available</p>
+    <p>$350 - $2,500</p>
+
+    <a href="booking.html?match=france-england" class="book-now-btn">
+        Book Now
+    </a>
+</div>
+
+
+<!-- CARD 4 -->
+<div class="match-card" data-stage="final" data-city="riyadh">
+
+    <p class="match-stage">Final</p>
+    <p class="match-date">July 15, 2034</p>
+
+    <div class="teams-display">
+        <div class="team-box">
+            <div class="team-flag">🏆</div>
+            <h3>TBD</h3>
+            <p>TBD</p>
+        </div>
+
+        <strong class="vs-text">VS</strong>
+
+        <div class="team-box">
+            <div class="team-flag">🏆</div>
+            <h3>TBD</h3>
+            <p>TBD</p>
+        </div>
+    </div>
+
+    <p>🕒 21:00</p>
+    <p>📍 King Fahd International Stadium, Riyadh</p>
+    <p>🎟 20,000 tickets available</p>
+    <p>$500 - $5,000</p>
+
+    <a href="booking.html?match=final-match" class="book-now-btn">
+        Book Now
+    </a>
+</div>
+
+</section>
+
+
+<footer>
+    <p>© 2034 World Cup Booking Platform</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

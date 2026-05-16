@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - World Cup 2034 Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h2>🏆WC 2034</h2>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="matches.html">Matches</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mytickets.html">My Tickets</a></li>
+        </ul>
+    </nav>
+    
+    <main class="booking-page">
+
+        <section class="empty-booking-box" id="emptyBookingBox">
+            <h1>No Match Selected</h1>
+            <p>Please choose a match from the Matches page before booking tickets.</p>
+            <a href="matches.html" class="book-now-btn">Go to Matches</a>
+        </section>
+
+        <section id="bookingContent">
+
+            <section class="booking-match-card">
+                <div class="teams-row">
+                    <div class="team">
+                        <div class="flag" id="flagA"></div>
+                        <h3 id="teamA"></h3>
+                    </div>
+
+                    <h2>VS</h2>
+
+                    <div class="team">
+                        <div class="flag" id="flagB"></div>
+                        <h3 id="teamB"></h3>
+                    </div>
+                </div>
+
+                <div class="match-info">
+                    <span id="matchDate"></span>
+                    <span id="matchTime"></span>
+                    <span id="matchLocation"></span>
+                    <span id="matchTickets"></span>
+                </div>
+            </section>
+
+            <section class="ticket-section">
+                <h1>Select Ticket Category</h1>
+                <div class="ticket-grid" id="ticketGrid"></div>
+            </section>
+
+            <section class="booking-form-section">
+                <h2>Booking Form</h2>
+
+                <form id="bookingForm">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </form>
+            </section>
+
+            <section class="seat-section">
+                <h2>Seat Selection</h2>
+                <p>Select your preferred seat. Green = available, Gray = occupied.</p>
+                <div class="seat-map" id="seatMap"></div>
+            </section>
+
+            <section class="booking-summary">
+                <h2>Booking Summary</h2>
+
+                <div class="summary-row">
+                    <span>Match</span>
+                    <strong id="summaryMatch"></strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Category</span>
+                    <strong id="summaryCategory">None</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Price per Ticket</span>
+                    <strong id="summaryPrice">$0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Available Seats</span>
+                    <strong id="summarySeats">0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Quantity</span>
+
+                    <div class="quantity-control">
+                        <button type="button" onclick="decreaseQuantity()">-</button>
+                        <strong id="quantity">1</strong>
+                        <button type="button" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+
+                <div class="summary-row">
+                    <span>Selected Seat</span>
+                    <strong id="selectedSeatText">None</strong>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <strong id="totalPrice">$0</strong>
+                </div>
+
+                <button type="button" class="confirm-btn" onclick="confirmBooking()">
+                    <span class="cart-icon">🛒</span>
+                    <span>Add to Cart</span>
+                </button>
+
+                <p id="successMessage" class="success-message"></p>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2034 World Cup Booking Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
